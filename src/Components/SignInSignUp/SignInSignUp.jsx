@@ -4,8 +4,9 @@ import React, { useState, useEffect } from "react";
 import "./SignInSignUp.css";
 import { useDispatch, useSelector } from "react-redux";
 import toast from "react-hot-toast";
-import { signUp, signIn, clearState,loadUser } from "../../store/reducers/userReducers";
+import { signUp, signIn, clearState, loadUser } from "../../store/reducers/userReducers";
 import Loader from "../../Components/Loader";
+
 const SignInSignUp = ({ onClose }) => {
   const [isSignUp, setIsSignUp] = useState(false);
   const [name, setName] = useState("");
@@ -25,16 +26,17 @@ const SignInSignUp = ({ onClose }) => {
 
   useEffect(() => {
     if (isSignUpped) {
-      toast.success("Succesvol aangemeld");
+      toast.success("Succesvol geregistreerd");
       dispatch(clearState());
       onClose();
       dispatch(loadUser());
     }
     if (error) {
-      toast.error("E-mailadres Al geregistreerd");
+      toast.error("E-mailadres al geregistreerd");
       dispatch(clearState());
     }
   }, [isSignUpped]);
+
   useEffect(() => {
     if (isSignedIn) {
       toast.success("Succesvol aangemeld");
@@ -43,7 +45,8 @@ const SignInSignUp = ({ onClose }) => {
       dispatch(loadUser());
     }
     if (error) {
-      toast.error("Verkeerde email of wachtwoord");
+      toast.error("Verkeerd e-mailadres of wachtwoord");
+      dispatch(clearState());
     }
   }, [isSignedIn]);
 
@@ -51,11 +54,11 @@ const SignInSignUp = ({ onClose }) => {
     e.preventDefault();
     if (isSignUp) {
       console.log(
-        `Signing up with Name: ${name}, Email: ${email}, Password: ${password}`
+        `Registreren met Naam: ${name}, E-mailadres: ${email}, Wachtwoord: ${password}`
       );
       dispatch(signUp({ name, email, password }));
     } else {
-      console.log(`Signing in with Email: ${email}, Password: ${password}`);
+      console.log(`Aanmelden met E-mailadres: ${email}, Wachtwoord: ${password}`);
       dispatch(signIn({ email, password }));
     }
   };
@@ -71,7 +74,7 @@ const SignInSignUp = ({ onClose }) => {
       </button>
       <div className="auth-content">
         <h2 className="font-bold text-3xl">
-          {isSignUp ? "Create An Account" : "Sign In"}
+          {isSignUp ? "Maak een account aan" : "Aanmelden"}
         </h2>
         <form onSubmit={handleSubmit} className="auth-form">
           {isSignUp && (
@@ -79,7 +82,7 @@ const SignInSignUp = ({ onClose }) => {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Name"
+              placeholder="Naam"
               required
             />
           )}
@@ -87,22 +90,22 @@ const SignInSignUp = ({ onClose }) => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
+            placeholder="E-mailadres"
             required
           />
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
+            placeholder="Wachtwoord"
             required
           />
-          <button type="submit">{isSignUp ? "Sign Up" : "Sign In"}</button>
+          <button type="submit">{isSignUp ? "Registreren" : "Aanmelden"}</button>
         </form>
         <p className="toggle-form-text">
-          {isSignUp ? "Already have an account? " : "Don't have an account? "}
+          {isSignUp ? "Heb je al een account? " : "Heb je geen account? "}
           <span onClick={toggleForm} className="toggle-form-span">
-            {isSignUp ? "Sign In" : "Sign Up"}
+            {isSignUp ? "Aanmelden" : "Registreren"}
           </span>
         </p>
       </div>
