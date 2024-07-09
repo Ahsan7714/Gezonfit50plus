@@ -1,0 +1,132 @@
+.newsletter-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    background-image: url("https://images.pexels.com/photos/7130497/pexels-photo-7130497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 40%;
+  }
+  .myServices-container {
+    position: relative;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCPpyOBdnWbUmoKpdgTijheV4sRaD5dlH4s1P0l9Gg4lsBr_PwC0AV08iN_s3S7L8fq4I&usqp=CAU");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+  
+  .myServices-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to make it darker or lighter */
+    z-index: 1;
+  }
+  
+  .myServices-header,
+  .myService-list,
+  .modal-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  
+  .newsletter-content {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .newsletter-content h2 {
+    margin-bottom: 26px;
+  }
+  
+  .newsletter-content p {
+    margin-bottom: 26px;
+  }
+  
+  .newsletter-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 20px;
+  }
+  
+  .newsletter-content form input[type="email"] {
+    width: 80%;
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .newsletter-content form button {
+    padding: 10px 20px;
+    width: 80%;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  
+  .newsletter-content form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #212122;
+    font-size: 18px;
+  }
+  
+  .close-btn:hover {
+    text-decoration: none;
+  }
+  
+@media screen and (max-width: 414px) {
+    .newsletter-popup {
+      width: 90%;
+      padding: 10px;
+    }
+  
+    .newsletter-content {
+      padding: 20px;
+    }
+  
+    .newsletter-content h2 {
+      margin-bottom: 20px;
+    }
+  
+    .newsletter-content p {
+      margin-bottom: 20px;
+    }
+  
+    .newsletter-content form input[type="email"] {
+      width: 100%;
+    }
+  
+    .newsletter-content form button {
+      width: 100%;
+    }
+  
+    .close-btn {
+      top: 5px;
+      right: 5px;
+    }
+  } 

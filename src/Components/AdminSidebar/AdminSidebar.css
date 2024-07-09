@@ -1,0 +1,28 @@
+/* Custom scrollbar for the sidebar */
+.sidebar-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .sidebar-scrollbar::-webkit-scrollbar-track {
+    background: #f8fafb;
+  }
+  
+  .sidebar-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #a0aec0;
+    border-radius: 4px;
+  }
+  
+  /* Custom scrollbar for the right page content */
+  .content-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .content-scrollbar::-webkit-scrollbar-track {
+    background: #f8fafb;
+  }
+  
+  .content-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #15aaed;
+    border-radius: 4px;
+  }
+  

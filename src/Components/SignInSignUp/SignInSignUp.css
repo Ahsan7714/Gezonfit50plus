@@ -1,0 +1,96 @@
+.auth-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 90%; /* Adjusted for responsiveness */
+  max-width: 400px; /* Limit maximum width for smaller screens */
+}
+
+.auth-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.auth-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.auth-content form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.auth-content form button {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-content form button:hover {
+  background-color: #0056b3;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #212122;
+  font-size: 18px;
+}
+
+.close-btn:hover {
+  text-decoration: none;
+}
+
+.toggle-form-text {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.toggle-form-span {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.toggle-form-span:hover {
+  color: #014fa3;
+}
+
+@media screen and (max-width: 414px) {
+  .auth-popup {
+    padding: 10px;
+    width: 90%;
+    max-width: 100%; /* Adjust to take full width of smaller screens */
+  }
+
+  .auth-content {
+    padding: 10px;
+  }
+
+  .close-btn {
+    top: 5px;
+    right: 5px;
+  }
+}

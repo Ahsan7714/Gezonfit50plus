@@ -1,0 +1,13 @@
+
+.community-head{
+  background-image: url('https://media.istockphoto.com/id/1339787499/photo/empty-dark-blue-studio-room-with-light-and-shadow-abstract-background-copy-space-studio-room.jpg?b=1&s=612x612&w=0&k=20&c=9ERC58j5zAEfISv_uhShkq0cBkg4MelqokeJ0MAQmFc='); /* Replace with a valid image URL */
+  background-size: cover;
+  padding: 20px;
+  color: white;
+  width: 100%;
+}
+@media screen and (max-width:414px) {
+  .chat-a{
+    width: 90%;
+  }
+}

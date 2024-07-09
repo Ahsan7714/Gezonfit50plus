@@ -1,0 +1,134 @@
+.post-container {
+  padding: 20px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.image-preview {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.myposts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.mypost {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33% - 20px); 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mypost-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.mypost-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.mypost-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.mypost-body {
+  padding: 15px;
+}
+
+.mypost-body h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.mypost-body p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.status{
+  padding: 10px 20px;
+  background-color: #3c608a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: auto; /* Adjust width as needed */
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; 
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap; 
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* .border{
+  border: 5px solid #cccccc;
+} */
+
+@media screen and (max-width: 1024px) {
+  .mypost {
+    width: calc(50% - 20px); /* Two columns on medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mypost {
+    width: calc(100% - 20px); /* Full width on small screens */
+    max-width: 400px; /* Limit maximum width */
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .post-container {
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+
+  .myposts {
+    padding: 10px; /* Adjust padding */
+    gap: 15px; /* Adjust gap between posts */
+  }
+}
