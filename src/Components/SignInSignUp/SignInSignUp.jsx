@@ -6,8 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import { signUp, signIn, clearState, loadUser } from "../../store/reducers/userReducers";
 import Loader from "../../Components/Loader";
+import { useNavigate } from "react-router-dom";
 
 const SignInSignUp = ({ onClose }) => {
+  const navigate = useNavigate();
   const [isSignUp, setIsSignUp] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -30,6 +32,7 @@ const SignInSignUp = ({ onClose }) => {
       dispatch(clearState());
       onClose();
       dispatch(loadUser());
+      navigate("/");
     }
     if (error) {
       toast.error("E-mailadres al geregistreerd");
@@ -43,6 +46,7 @@ const SignInSignUp = ({ onClose }) => {
       dispatch(clearState());
       onClose();
       dispatch(loadUser());
+      navigate("/");
     }
     if (error) {
       toast.error("Verkeerd e-mailadres of wachtwoord");
