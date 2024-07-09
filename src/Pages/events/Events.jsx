@@ -185,7 +185,7 @@ function Events() {
                 Post Event
               </button>
               )  : (
-               <button  onClick={()=>toast.error("Please SignUp or login to post events")}  className="bg-gradient-to-r from-[#0f8ceb] to-[#1ad0f1] px-3 py-2 text-white rounded-md"
+               <button  onClick={()=>toast.error("Meld u aan om deze functie te gebruiken")}  className="bg-gradient-to-r from-[#0f8ceb] to-[#1ad0f1] px-3 py-2 text-white rounded-md"
 >Post Event</button>
               )}
               
@@ -311,7 +311,7 @@ function Events() {
         <div className="events-list">
           {filteredEvents && filteredEvents.length > 0 ? (
             filteredEvents.map((event, index) => (
-              <div key={index} className="event-card">
+              <div key={index} className="event-card min-h-[80vh]">
                 <img src={event.image} alt={event.title} className="event-image" />
                 <div className="event-details">
                   <h2>{event.title}</h2>

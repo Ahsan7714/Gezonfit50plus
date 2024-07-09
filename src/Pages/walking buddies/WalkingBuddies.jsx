@@ -67,7 +67,7 @@ function WalkingBuddies() {
       setName("");
       setContactInfo("");
       setMessage("");
-      toast.success("Invitation sent successfully");
+      toast.success("Uitnodiging succesvol verzonden");
       dispatch(clearState());
       dispatch(getAllActivePartners());
     }
@@ -79,7 +79,7 @@ function WalkingBuddies() {
       return;
     }
     if (!name || !contactInfo || !message) {
-      toast.error("All fields are required");
+      toast.error("alle velden zijn verplicht");
       return;
     }
     const data = { name, contactInfo, message };
@@ -138,7 +138,7 @@ function WalkingBuddies() {
           ) : (
             <button
               onClick={() =>
-                toast.error("Please SignUp or Login to view posts")
+                toast.error("Meld u aan om deze functie te gebruiken")
               }
               className="bg-[#37a8d8] shadow-[#ade6ff] shadow-lg text-white px-4 py-2 rounded hover:bg-[#247394]"
             >

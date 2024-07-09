@@ -107,7 +107,7 @@ function Products() {
           </div>
           {user ? ( <Link to="/my-products" className="myproducts-btn">
             Mijn Producten
-          </Link>):( <button onClick={()=>toast.error("Please SignUp to view  MyProducts")} className="myproducts-btn">
+          </Link>):( <button onClick={()=>toast.error("Meld u aan om deze functie te gebruiken")} className="myproducts-btn">
             Mijn Producten
           </button>)}
          
@@ -127,7 +127,7 @@ function Products() {
                 </p>
                 <p className="flex justify-between m-2"> <strong>Contact</strong> {product.contact}</p>
                 <button
-                  className="details-btn"
+                  className="details-btn mr-2"
                   onClick={() => openModal(product, index)}
                 >
                   lees details
@@ -189,16 +189,6 @@ function Products() {
                     </span>
                   )}
                 </p>
-              </div>
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                  onClick={closeModal}
-                >
-                  Sluiten
-                </button>
               </div>
             </div>
           </div>

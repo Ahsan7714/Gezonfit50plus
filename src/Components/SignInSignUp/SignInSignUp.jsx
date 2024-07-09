@@ -25,25 +25,25 @@ const SignInSignUp = ({ onClose }) => {
 
   useEffect(() => {
     if (isSignUpped) {
-      toast.success("Signed Up Successfully");
+      toast.success("Succesvol aangemeld");
       dispatch(clearState());
       onClose();
       dispatch(loadUser());
     }
     if (error) {
-      toast.error("Wrong Credentials");
+      toast.error("E-mailadres Al geregistreerd");
       dispatch(clearState());
     }
   }, [isSignUpped]);
   useEffect(() => {
     if (isSignedIn) {
-      toast.success("Signed In Successfully");
+      toast.success("Succesvol aangemeld");
       dispatch(clearState());
       onClose();
       dispatch(loadUser());
     }
     if (error) {
-      toast.error("Wrong Email or Paswword");
+      toast.error("Verkeerde email of wachtwoord");
     }
   }, [isSignedIn]);
 

@@ -49,7 +49,7 @@ const MobileNavbar = () => {
             </div>
             <div className="mt-4 w-full capitalize">
               <Link to="/" onClick={toggleSidebar} className="flex items-center py-2 px-4 text-[20px] hover:bg-gray-200">
-                <FaHome className="mr-2" /> geschiktheid
+                <FaHome className="mr-2" />  Startpagina
               </Link>
               <Link to="/blogs" onClick={toggleSidebar} className="flex items-center py-2 px-4 text-[20px] hover:bg-gray-200">
                 <FaBlog className="mr-2" /> Artikelen en Blogs

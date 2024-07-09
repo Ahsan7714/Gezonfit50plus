@@ -58,19 +58,22 @@ const Blog = () => {
        
         <div className="cards">
           {blogs && blogs.map((item, index) => (
-            <div key={index} className="blog-card lg:h-[100%] flex flex-col">
+            <div key={index} className="blog-card lg:h-[100vh] flex flex-col">
               <div className=" flex-1 h-[50%]">
 
               <img src={item.image} alt={item.title} />
               </div>
-              <div className="content flex-1 h-[50%] bg-white">
+              <div className="content flex-1 h-[50%] bg-white flex flex-col">
                 <h2 className=" font-semibold text-[30px] mb-3">{item.title}</h2>
-                <div className="">
-                <p dangerouslySetInnerHTML={{ __html: truncateText(item.content, 40) }} className=" h-[100px] overflow-hidden" />
+                <div className="h-[52%] overflow-hidden">
+                <p dangerouslySetInnerHTML={{ __html: item.content }} className="  overflow-hidden" />
                 </div>
+                <div className=" h-[20%]">
                 <Link to={`/blog/${item._id}`} className="button">
                   Lees meer
                 </Link>
+                </div>
+               
               </div>
             </div>
           ))}

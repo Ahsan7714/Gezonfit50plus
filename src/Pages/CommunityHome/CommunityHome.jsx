@@ -43,7 +43,7 @@ const CommunityHome = () => {
                         <li><strong>Geen spam:</strong> Vermijd ongevraagde promoties of herhaalde berichten.</li>
                         <li><strong>Blijf on-topic:</strong> Houd gesprekken relevant voor het onderwerp van de groep.</li>
                         <li><strong>Privacy respecteren:</strong> Deel geen persoonlijke informatie van jezelf of anderen zonder toestemming.</li>
-                        <li><strong>Constructieve bijdragen:</strong> Lever zinvolle bijdragen en vermijd trollen.</li>
+                        <li><strong>Constructieve bijdragen:</strong> Lever zinvolle bijdragen.</li>
                         <li><strong>Gebruik fatsoenlijke taal:</strong> Vermijd scheldwoorden en ongepaste taal.</li>
                         <li><strong>Rapporteer problemen:</strong> Meld ongepast gedrag aan de beheerders.</li>
                     </ul>
@@ -52,7 +52,7 @@ const CommunityHome = () => {
                         <Link to="/community-chat" className="bg-[#3c608a] text-white py-2 px-6 rounded-full text-lg hover:bg-[#2b4a6d] transition duration-300">Join Chat</Link>
 
                         ):(
-                        <button onClick={()=>toast.error("Please SignUp to join chat")} className="bg-[#3c608a] text-white py-2 px-6 rounded-full text-lg hover:bg-[#2b4a6d] transition duration-300">Join Chat</button>
+                        <button onClick={()=>toast.error("Meld u aan om deel te nemen aan de chat")} className="bg-[#3c608a] text-white py-2 px-6 rounded-full text-lg hover:bg-[#2b4a6d] transition duration-300">Join Chat</button>
                         )}
                     </div>
                 </div>

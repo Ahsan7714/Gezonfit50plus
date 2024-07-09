@@ -95,7 +95,7 @@ function Services() {
         >
           Mijn Diensten
         </Link>):(
-          <button onClick={() => toast.error("Please SignUp to access this feature")}
+          <button onClick={() => toast.error("Meld u aan om deze functie te gebruiken")}
           className="bg-green-500 px-3 py-2 text-white rounded-md"
 >
             Mijn Diensten
@@ -182,15 +182,6 @@ function Services() {
                   </p>
                 </>
               )}
-            </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Dichtbij
-              </button>
             </div>
           </div>
         </div>
