@@ -33,6 +33,7 @@ import AdminBlogs from "./Pages/AdminDashboard/Blogs/AdminBlogs";
 import CommunityHome from "./Pages/CommunityHome/CommunityHome";
 import Policy from "./Pages/Policy/Policy";
 import AboutUs from "./Pages/AboutUs/AboutUs";
+import AdminContact from "./Pages/AdminDashboard/ContactUs/AdminContact";
 
 function App() {
   const [screenSize, setScreenSize] = React.useState(window.innerWidth);
@@ -103,6 +104,7 @@ function App() {
         <Route path="/dashboard/products" element={<AdminProducts />} />
         <Route path="/dashboard/services" element={<AdminServices />} />
         <Route path="/dashboard/blogs" element={<AdminBlogs />} />
+        <Route path="/dashboard/contact-us" element={<AdminContact />} />
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/blog/:id" element={<Blog1 />} />

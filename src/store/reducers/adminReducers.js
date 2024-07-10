@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import baseurl from "../baseUrl";
 
-
 const initialState = {
   loading: false,
   error: "",
@@ -22,25 +21,27 @@ const initialState = {
   isPendingEventDeleted: false,
   isPendingEventUpdated: false,
   isActiveEventDeleted: false,
-  isEventPosted :false,
-  pendingpartners :[],
-  activepartners :[],
-  isPendingPartnerDeleted :false,
-  isPendingPartnerUpdated :false,
-  isActivePartnerDeleted :false,
-  activeproducts :[],
-  pendingproducts :[],
-  isPendingProductDeleted :false,
-  isPendingProductUpdated :false,
-  isActiveProductDeleted :false,
-  isNewsletterDeleted :false,
-  isBlogPosted :false,
-  pendingblogs :[],
-  activeblogs :[],
-  isPendingBlogDeleted :false,
-  isActiveBlogDeleted :false,
-  isPendingBlogUpdated :false,
-  isLoggedOut : false,
+  isEventPosted: false,
+  pendingpartners: [],
+  activepartners: [],
+  isPendingPartnerDeleted: false,
+  isPendingPartnerUpdated: false,
+  isActivePartnerDeleted: false,
+  activeproducts: [],
+  pendingproducts: [],
+  isPendingProductDeleted: false,
+  isPendingProductUpdated: false,
+  isActiveProductDeleted: false,
+  isNewsletterDeleted: false,
+  isBlogPosted: false,
+  pendingblogs: [],
+  activeblogs: [],
+  isPendingBlogDeleted: false,
+  isActiveBlogDeleted: false,
+  isPendingBlogUpdated: false,
+  isLoggedOut: false,
+  contactforms: [],
+  isContactFormDeleted: false,
 };
 
 // delete all newsletter
@@ -48,9 +49,12 @@ export const deleteNewsletter = createAsyncThunk(
   "admin/deleteNewsletter",
   async (_, { fulfillWithValue, rejectWithValue }) => {
     try {
-      const response = await axios.delete(`${baseurl}/admin/delete-newsletters`, {
-        withCredentials: true,
-      });
+      const response = await axios.delete(
+        `${baseurl}/admin/delete-newsletters`,
+        {
+          withCredentials: true,
+        }
+      );
       return fulfillWithValue(response);
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -331,7 +335,7 @@ export const getPendingPartners = createAsyncThunk(
       return fulfillWithValue(data.pendingpartners);
     } catch (error) {
       return rejectWithValue(error.response.data);
-    } 
+    }
   }
 );
 // update pending partner
@@ -339,9 +343,12 @@ export const updatePendingPartner = createAsyncThunk(
   "admin/updatePendingPartner",
   async (id, { fulfillWithValue, rejectWithValue }) => {
     try {
-      const response = await axios.put(`${baseurl}/admin/approve-partner/${id}`, {
-        withCredentials: true,
-      });
+      const response = await axios.put(
+        `${baseurl}/admin/approve-partner/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
       return fulfillWithValue(response);
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -369,9 +376,12 @@ export const deletePendingPartner = createAsyncThunk(
   "admin/deletePendingPartner",
   async (id, { fulfillWithValue, rejectWithValue }) => {
     try {
-      const response = await axios.delete(`${baseurl}/admin/delete-pending-partner/${id}`, {
-        withCredentials: true,
-      });
+      const response = await axios.delete(
+        `${baseurl}/admin/delete-pending-partner/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
       return fulfillWithValue(response);
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -384,9 +394,12 @@ export const deleteActivePartner = createAsyncThunk(
   "admin/deleteActivePartner",
   async (id, { fulfillWithValue, rejectWithValue }) => {
     try {
-      const response = await axios.delete(`${baseurl}/admin/delete-partner/${id}`, {
-        withCredentials: true,
-      });
+      const response = await axios.delete(
+        `${baseurl}/admin/delete-partner/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
       return fulfillWithValue(response);
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -412,9 +425,12 @@ export const updatePendingProduct = createAsyncThunk(
   "admin/updatePendingProduct",
   async (id, { fulfillWithValue, rejectWithValue }) => {
     try {
-      const response = await axios.put(`${baseurl}/admin/update-product/${id}`, {
-        withCredentials: true,
-      });
+      const response = await axios.put(
+        `${baseurl}/admin/update-product/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
       return fulfillWithValue(response);
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -440,9 +456,12 @@ export const deletePendingProduct = createAsyncThunk(
   "admin/deletePendingProduct",
   async (id, { fulfillWithValue, rejectWithValue }) => {
     try {
-      const response = await axios.delete(`${baseurl}/admin/delete-pending-product/${id}`, {
-        withCredentials: true,
-      });
+      const response = await axios.delete(
+        `${baseurl}/admin/delete-pending-product/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
       return fulfillWithValue(response);
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -454,9 +473,12 @@ export const deleteActiveProduct = createAsyncThunk(
   "admin/deleteActiveProduct",
   async (id, { fulfillWithValue, rejectWithValue }) => {
     try {
-      const response = await axios.delete(`${baseurl}/admin/delete-active-product/${id}`, {
-        withCredentials: true,
-      });
+      const response = await axios.delete(
+        `${baseurl}/admin/delete-active-product/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
       return fulfillWithValue(response);
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -483,7 +505,7 @@ export const getPendingBlogs = createAsyncThunk(
   async (_, { fulfillWithValue, rejectWithValue }) => {
     try {
       const { data } = await axios.get(`${baseurl}/admin/pending-blogs`, {
-        withCredentials: true,  
+        withCredentials: true,
       });
       return fulfillWithValue(data.pendingblogs);
     } catch (error) {
@@ -510,9 +532,12 @@ export const deletePendingBlog = createAsyncThunk(
   "admin/deletePendingBlog",
   async (id, { fulfillWithValue, rejectWithValue }) => {
     try {
-      const response = await axios.delete(`${baseurl}/admin/delete-pending-blog/${id}`, {
-        withCredentials: true,
-      });
+      const response = await axios.delete(
+        `${baseurl}/admin/delete-pending-blog/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
       return fulfillWithValue(response);
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -524,9 +549,12 @@ export const deleteActiveBlog = createAsyncThunk(
   "admin/deleteActiveBlog",
   async (id, { fulfillWithValue, rejectWithValue }) => {
     try {
-      const response = await axios.delete(`${baseurl}/admin/delete-active-blog/${id}`, {
-        withCredentials: true,
-      });
+      const response = await axios.delete(
+        `${baseurl}/admin/delete-active-blog/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
       return fulfillWithValue(response);
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -563,6 +591,37 @@ export const logout = createAsyncThunk(
   }
 );
 
+// get all contact forms
+export const getContactForms = createAsyncThunk(
+  "admin/getContactForms",
+  async (_, { fulfillWithValue, rejectWithValue }) => {
+    try {
+      const { data } = await axios.get(`${baseurl}/admin/contact-us`, {
+        withCredentials: true,
+      });
+      return fulfillWithValue(data.contactforms);
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+// delete contact form
+export const deleteContactForm = createAsyncThunk(
+  "admin/deleteContactForm",
+  async (id, { fulfillWithValue, rejectWithValue }) => {
+    try {
+      const response = await axios.delete(
+        `${baseurl}/admin/delete-contact/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
+      return fulfillWithValue(response);
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
 
 export const adminReducer = createSlice({
   name: "adminReducer",
@@ -606,6 +665,8 @@ export const adminReducer = createSlice({
       state.isActiveBlogDeleted = false;
       state.isPendingBlogUpdated = false;
       state.isLoggedOut = false;
+      state.contactforms = [];
+      state.isContactFormDeleted = false;
     },
   },
   extraReducers: (builder) => {
@@ -832,8 +893,7 @@ export const adminReducer = createSlice({
     builder.addCase(updatePendingPartner.fulfilled, (state) => {
       state.loading = false;
       state.isPendingPartnerUpdated = true;
-    }
-    );
+    });
     builder.addCase(updatePendingPartner.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload.message;
@@ -1017,6 +1077,29 @@ export const adminReducer = createSlice({
     builder.addCase(logout.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload.message;
+    });
+    // getContactForms
+    builder.addCase(getContactForms.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(getContactForms.fulfilled, (state, action) => {
+      state.loading = false;
+      state.contactforms = action.payload;
+    });
+    builder.addCase(getContactForms.rejected, (state, action) => {
+      state.loading = false;
+      state.error = action.payload.message;
+    });
+    // deleteContactForm
+    builder.addCase(clearState, (state) => {
+      state = initialState;
+    });
+    builder.addCase(deleteContactForm.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(deleteContactForm.fulfilled, (state) => {
+      state.loading = false;
+      state.isContactFormDeleted = true;
     });
 
   },

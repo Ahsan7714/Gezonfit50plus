@@ -12,6 +12,7 @@ import { GoPeople } from "react-icons/go";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { MdMiscellaneousServices } from "react-icons/md";
 import { ImBlog } from "react-icons/im";
+import { TiContacts } from "react-icons/ti";
 import { useDispatch , useSelector } from "react-redux";
 import logo from "../../assets/admin.png";
 import './AdminSidebar.css';
@@ -62,19 +63,6 @@ const AdminSidebar = () => {
         >
           <LuLayoutDashboard />
           <p>Dashboard</p>
-        </Link>
-        <Link
-          to="/dashboard/news-letters"
-          className={`
-        ${
-          location.pathname == "/dashboard/news-letters"
-            ? "bg-gradient-to-r from-[#0f8ceb] to-[#1ad0f1] text-white "
-            : "text-[#000000a5] "
-        }
-        flex gap-2 items-center text-[20px] h-10 px-4 rounded-md`}
-        >
-          <IoNewspaperOutline />
-          <p>Newsletters</p>
         </Link>
         <Link
           to="/dashboard/blogs"
@@ -141,6 +129,37 @@ const AdminSidebar = () => {
           <MdMiscellaneousServices />
           <p>Services</p>
         </Link>
+        <Link
+          to="/dashboard/news-letters"
+          className={`
+        ${
+          location.pathname == "/dashboard/news-letters"
+            ? "bg-gradient-to-r from-[#0f8ceb] to-[#1ad0f1] text-white "
+            : "text-[#000000a5] "
+        }
+        flex gap-2 items-center text-[20px] h-10 px-4 rounded-md`}
+        >
+          <IoNewspaperOutline />
+          <p>Newsletters</p>
+        </Link>
+        <Link
+          to="/dashboard/contact-us"
+          className={`
+        ${
+          location.pathname == "/dashboard/contact-us"
+            ? "bg-gradient-to-r from-[#0f8ceb] to-[#1ad0f1] text-white "
+            : "text-[#000000a5] "
+        }
+        flex gap-2 items-center text-[20px] h-10 px-4 rounded-md`}
+        >
+          <TiContacts />
+          <p>Contact Us</p>
+        </Link>
+        
+        
+       
+        
+       
         <Link
           
           className={`
