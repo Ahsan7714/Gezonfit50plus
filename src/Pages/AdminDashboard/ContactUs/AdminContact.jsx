@@ -83,7 +83,7 @@ const AdminContact = () => {
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
-                                        {contactforms && contactforms.length>0 ? (contactforms.map((user, index) => (
+                                        {contactforms && contactforms.length > 0 ? (contactforms.map((user, index) => (
                                             <TableRow key={user._id}>
                                                 <TableCell align="center" className="text-[475px] !important">
                                                     {index + 1}
@@ -99,7 +99,7 @@ const AdminContact = () => {
                                                 </TableCell>
                                             </TableRow>
                                         ) )) : (<TableRow>
-                                            <TableCell colSpan={2} align="center" className="text-[475px] !important">
+                                            <TableCell colSpan={2} align="center" className="text-[475px] text-center !important">
                                                 No Data Found
                                             </TableCell>
                                             </TableRow>)

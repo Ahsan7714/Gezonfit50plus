@@ -599,7 +599,8 @@ export const getContactForms = createAsyncThunk(
       const { data } = await axios.get(`${baseurl}/admin/contact-us`, {
         withCredentials: true,
       });
-      return fulfillWithValue(data.contactforms);
+      console.log(data);
+      return fulfillWithValue(data.contactUs);
     } catch (error) {
       return rejectWithValue(error.response.data);
     }
