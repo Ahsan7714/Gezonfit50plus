@@ -126,12 +126,12 @@ const AdminContact = () => {
               <strong>Message:</strong> {selectedContact.message}
             </p>
             <div>
-              <button
+              {/* <button
                 className="bg-red-600 text-white px-3 py-2 rounded-md mt-4"
                 onClick={() => handleDelete(selectedContact._id)}
               >
                 Delete
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
