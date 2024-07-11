@@ -67,10 +67,10 @@ const MobileNavbar = () => {
                 <HiOutlineShoppingBag className="mr-2" /> Products
               </Link>
               <Link to="/services" onClick={toggleSidebar} className="flex items-center py-2 px-4 text-[20px] hover:bg-gray-200">
-                <MdMiscellaneousServices className="mr-2" /> Services
+                <MdMiscellaneousServices className="mr-2" /> Diensten
               </Link>
               <button onClick={toggleAuthPopup} className="flex items-center py-2 px-4 text-[20px] hover:bg-gray-200">
-                <IoMdLogIn className="mr-2" /> SignIn & SignUp
+                <IoMdLogIn className="mr-2" /> Aanmelden en registreren
               </button>
               <button onClick={toggleContactPopup} className="flex items-center py-2 px-4 text-[20px] hover:bg-gray-200">
                 <MdOutlineContactSupport className="mr-2" /> Contact

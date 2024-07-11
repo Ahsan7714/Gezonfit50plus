@@ -122,16 +122,16 @@ const AdminContact = () => {
                 <IoMdClose className=" text-[30px]" />
               </button>
             </div>
-            <p className="max-h-[90px] overflow-y-auto">
+            <p className="max-h-[90px] overflow-y-auto mt-4">
               <strong>Message:</strong> {selectedContact.message}
             </p>
-            <div>
-              {/* <button
+            <div className=" flex justify-end items-end">
+              <button
                 className="bg-red-600 text-white px-3 py-2 rounded-md mt-4"
                 onClick={() => handleDelete(selectedContact._id)}
               >
                 Delete
-              </button> */}
+              </button>
             </div>
           </div>
         </div>

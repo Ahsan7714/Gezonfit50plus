@@ -183,10 +183,10 @@ function WalkingBuddies() {
             className="border-2 rounded p-2 border-[#00000077]"
           >
             <option value="">Selecteer Categorie</option>
-            <option value="Walking">Walking</option>
-            <option value="Cycling">Cycling</option>
-            <option value="Swimming">Swimming</option>
-            <option value="Exercise">Exercise</option>
+            <option value="Walking">Wandelen</option>
+            <option value="Cycling">Fietsen</option>
+            <option value="Swimming">Zwemmen</option>
+            <option value="Exercise">Fitnes/Yoga</option>
           </select>
         </div>
         <div className="walk-posts grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
@@ -197,7 +197,7 @@ function WalkingBuddies() {
           ) : (
             filteredPosts.map((post, index) => (
               <div
-                className="walk-post border rounded-lg p-4 shadow-md bg-[#f5f5f5]"
+                className="walk-post border  rounded-lg p-4 shadow-md bg-[#f5f5f5]"
                 key={index}
               >
                 <div className="post-header flex items-center space-x-4 lg:mb-0">
@@ -212,7 +212,7 @@ function WalkingBuddies() {
                     />
                   )}
                 </div>
-                <div className="post-body bg-white rounded-lg">
+                <div className="post-body  bg-white rounded-lg">
                   <p className="flex  justify-between  ">
                     <strong>Leeftijd:</strong> {""}
                     {post.age}
@@ -222,7 +222,7 @@ function WalkingBuddies() {
                     {post.gender}
                   </p>
                   <p className="flex justify-between">
-                    <strong>Stad:</strong> {""}
+                    <strong>Woonplaats:</strong> {""}
                     {post.city}
                   </p>
                   <p className="flex  gap-[5px] justify-between">

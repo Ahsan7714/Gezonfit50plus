@@ -170,10 +170,10 @@ function Products() {
                   <strong>Details</strong> {selectedProduct.productDetails}
                 </p>
                 <p className="text-xl flex flex-column gap-[5px]">
-                  <strong>Contact</strong> {selectedProduct.contact}
+                  <strong>Telefoonnummer</strong> {selectedProduct.contact}
                 </p>
                 <p className="text-xl flex flex-column gap-[5px]">
-                  <strong>Adres</strong> {selectedProduct.address}
+                  <strong>Woonplaats</strong> {selectedProduct.address}
                 </p>
                 <p className="text-xl flex flex-column gap-[5px]">
                   <strong>Beschrijving</strong>{" "}

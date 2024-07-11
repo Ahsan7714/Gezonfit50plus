@@ -102,12 +102,21 @@ const Posts = () => {
   }, [isPartnerPosted, isPartnerDeleted]);
 
   useEffect(() => {
-    if (isPartnerDeleted || isActivePartnerDeleted) {
+    if (isPartnerDeleted) {
       dispatch(getPendingPartners());
+      dispatch(getActivePartners());
       toast.success("Bericht succesvol verwijderd");
       dispatch(clearState());
     }
-  }, [isPartnerDeleted]);
+  }, [isPartnerDeleted, dispatch,clearState]);
+  useEffect(() => {
+    if (isActivePartnerDeleted) {
+      dispatch(getPendingPartners());
+      dispatch(getActivePartners());
+      toast.success("Bericht succesvol verwijderd");
+      dispatch(clearState());
+    }
+  }, [isActivePartnerDeleted,dispatch,clearState]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -119,13 +128,16 @@ const Posts = () => {
     }
   }, [error]);
 
-  const handleDelete = (id) => {
+  const handleDelete = (id ,status) => {
     const confirmed = window.confirm(
       "Weet je zeker dat je dit bericht wilt verwijderen?"
     );
-    if (confirmed) {
-      dispatch(deletePartner(id));
-      dispatch(deleteActivePartner(id));
+    if(confirmed){
+      if (status === "pending") {
+        dispatch(deletePartner(id));
+      } else{
+        dispatch(deleteActivePartner(id));
+      }
     }
   };
 
@@ -170,7 +182,7 @@ const Posts = () => {
           data-bs-toggle="modal"
           data-bs-target="#staticBackdrop"
         >
-          Create post
+          Zoek een activiteitenpartner
         </button>
       </div>
 
@@ -189,7 +201,7 @@ const Posts = () => {
                 className="modal-title font-bold text-2xl"
                 id="staticBackdropLabel"
               >
-                Maak een Nieuwe Post
+                Zoek een activiteitenpartner
               </h2>
               <button
                 type="button"
@@ -226,11 +238,11 @@ const Posts = () => {
                     />
                   </div>
                   <div className="form-group w-2.9/6">
-                    <label>Stad</label>
+                    <label>Woonplaats</label>
                     <input
                       type="text"
                       name="city"
-                      placeholder="Stad invoeren"
+                      placeholder="Woonplaats invoeren"
                       value={formData.city}
                       onChange={handleChange}
                       className="form-control"
@@ -289,10 +301,10 @@ const Posts = () => {
                       required
                     >
                       <option value="">Selecteer Categorie</option>
-                      <option value="Walking">Walking</option>
-                      <option value="Cycling">Cycling</option>
-                      <option value="Swimming">Swimming</option>
-                      <option value="Exercise">Exercise</option>
+                      <option value="Walking">Wandelen</option>
+                      <option value="Cycling">Fietsen</option>
+                      <option value="Swimming">Zwemmen</option>
+                      <option value="Exercise">Fitnes/Yoga</option>
                     </select>
                   </div>
                   <div className="form-group ">
@@ -364,7 +376,7 @@ const Posts = () => {
             >
               <div className="mypost-header relative">
                 <RiDeleteBin5Fill
-                  onClick={() => handleDelete(post._id)}
+                  onClick={() => handleDelete(post._id,post.status)}
                   className=" absolute top-0 -left-2 text-white bg-red-500 rounded-sm cursor-pointer h-[27px] w-[27px] p-1"
                 />
                 <div className=" flex items-center">

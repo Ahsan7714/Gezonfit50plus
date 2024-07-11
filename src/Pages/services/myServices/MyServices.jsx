@@ -154,7 +154,7 @@ function MyServices() {
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="staticBackdropLabel">
-                Upload uw Diensten
+              Dienst aanmelden
               </h1>
               <button
                 type="button"
@@ -190,25 +190,25 @@ function MyServices() {
                   onChange={handleChange}
                 />
                 <label htmlFor="serviceDetails" className="pt-2">
-                  Service hoogtepunt
+                Bijkomende kosten
                 </label>
                 <input
                   type="text"
                   id="serviceDetails"
                   name="serviceDetails"
-                  placeholder="Servicehoogtepunt invoeren (maximaal 10 woorden)"
+                  placeholder="Bijkomende kosten (maximaal 10 woorden)"
                   className="w-full border-2 border-gray-400 rounded-md py-2 px-1 outline-none"
                   value={formData.serviceDetails}
                   onChange={handleChange}
                 />
                 <label htmlFor="contact" className="pt-2">
-                  Contact
+                Telefoonnummer
                 </label>
                 <input
                   type="text"
                   id="contact"
                   name="contact"
-                  placeholder="Voer contactinformatie in"
+                  placeholder="Voer Telefoonnummer in"
                   className="w-full border-2 border-gray-400 rounded-md py-2 px-1 outline-none"
                   value={formData.contact}
                   onChange={handleChange}

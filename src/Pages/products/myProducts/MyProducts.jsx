@@ -168,7 +168,7 @@ const MyProducts = () => {
         <div className="modal-overlay">
           <div className="create-product-sec">
             <div className="modal-header flex justify-between items-center">
-              <h2 className="text-2xl font-bold mx-auto">Lanceer je Product</h2>
+              <h2 className="text-2xl font-bold mx-auto">Product aanmelden</h2>
               <button
                 className="font-bold text-3xl mr-3 mt-0"
                 onClick={closeModal}
@@ -220,26 +220,26 @@ const MyProducts = () => {
                 </div>
 
                 <div className="form-group">
-                  <label>Adres</label>
+                  <label>Woonplaats</label>
                   <input
                     type="text"
                     name="address"
                     value={productData.address}
                     onChange={handleChange}
-                    placeholder="voer uw adres in"
+                    placeholder="voer uw Woonplaats in"
                     required
                   />
                 </div>
               </div>
               <div className="flex lg:flex-row flex-col w-full justify-between gap-4">
                 <div className="form-group">
-                  <label>Contact Nummer</label>
+                  <label>Telefoonnummer</label>
                   <input
                     type="text"
                     name="contact"
                     value={productData.contact}
                     onChange={handleChange}
-                    placeholder="Voer uw contactnummer in"
+                    placeholder="Voer uw Telefoonnummer in"
                     required
                   />
                 </div>

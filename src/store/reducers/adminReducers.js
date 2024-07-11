@@ -600,7 +600,7 @@ export const getContactForms = createAsyncThunk(
         withCredentials: true,
       });
       console.log(data);
-      return fulfillWithValue(data.contactUs);
+      return fulfillWithValue(data.contactforms);
     } catch (error) {
       return rejectWithValue(error.response.data);
     }

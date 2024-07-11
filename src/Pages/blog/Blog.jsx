@@ -65,7 +65,7 @@ const Blog = () => {
               </div>
               <div className="content flex-1 h-[50%] bg-white flex flex-col">
                 <h2 className=" font-semibold text-[30px] mb-3">{item.title}</h2>
-                <div className="h-[52%] overflow-hidden">
+                <div className="lg:h-[52%] h-[19vh] overflow-hidden">
                 <p dangerouslySetInnerHTML={{ __html: item.content }} className="  overflow-hidden" />
                 </div>
                 <div className=" h-[20%]">

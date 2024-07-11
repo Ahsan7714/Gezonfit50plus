@@ -43,7 +43,7 @@ const Vision = () => {
       {/* community */}
       <div className=" flex flex-col justify-center items-center gap-7 py-9">
         <p className=" text-[40px] text-center">
-          Word Lid van Onze Gemeenschap
+        Word vrijblijvend lid van onze gemeenschap
         </p>
         <div className=" flex flex-col lg:flex-row bg-[#3c608a]">
           <div className=" flex flex-col gap-6 justify-center items-center py-6 lg:py-0">

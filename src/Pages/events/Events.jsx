@@ -206,7 +206,7 @@ function Events() {
             <div className="modal-content">
               <div className="modal-header">
                 <h1 className="modal-title fs-5" id="staticBackdropLabel">
-                  Evenement Uploaden
+                Evenement aanmelden
                 </h1>
                 <button
                   type="button"
@@ -218,7 +218,7 @@ function Events() {
               <div className="modal-body flex flex-col w-full">
                 <div className="flex flex-col">
                   <label htmlFor="" className="">
-                    Evenement Naam
+                  Naam evenement
                   </label>
                   <input
                     type="text"
@@ -226,11 +226,11 @@ function Events() {
                     id=""
                     value={title}
                     onChange={handleTitleChange}
-                    placeholder="Voer evenement naam in"
+                    placeholder="Voer Naam evenement in"
                     className="w-full border-2 border-gray-400 rounded-md py-2 px-1 outline-none"
                   />
                   <label htmlFor="" className="pt-2">
-                    Evenement Locatie
+                  Locatie van het evenement
                   </label>
                   <input
                     type="text"
@@ -238,7 +238,7 @@ function Events() {
                     id=""
                     value={location}
                     onChange={handleLocationChange}
-                    placeholder="Voer evenement locatie in"
+                    placeholder="Voer  Locatie van het evenement in"
                     className="w-full border-2 border-gray-400 rounded-md py-2 px-1 outline-none"
                   />
                   <p className="text-[17px] pt-2 pb-2">

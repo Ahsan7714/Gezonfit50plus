@@ -157,11 +157,11 @@ function Services() {
                     <strong>Kosten</strong> € {selectedService.rate} per uur
                   </p>
                   <p className="text-xl flex flex-column gap-[5px]">
-                    <strong>Service hoogtepunt</strong>{" "}
+                    <strong>Bijkomende kosten</strong>{" "}
                     {selectedService.serviceDetails}
                   </p>
                   <p className="text-xl flex flex-column gap-[5px]">
-                    <strong>Contact</strong> {selectedService.contact}
+                    <strong>Telefoonnummer</strong> {selectedService.contact}
                   </p>
                   <p className="text-xl flex flex-column gap-[5px]">
                     <strong>Postcode</strong> {selectedService.postalCode}
