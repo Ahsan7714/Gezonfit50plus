@@ -1,6 +1,6 @@
 // src/Components/MobileNavbar/MobileNavbar.jsx
 import React, { useState } from 'react';
-import nav from '../../assets/default1.png';
+import nav from '../../assets/admin.png';
 import { FaBars, FaHome, FaBlog, FaWalking, FaUsers, FaCalendarAlt } from 'react-icons/fa';
 import { HiOutlineShoppingBag } from 'react-icons/hi2';
 import { MdMiscellaneousServices } from 'react-icons/md';
@@ -32,8 +32,8 @@ const MobileNavbar = () => {
   return (
     <div>
       <div className="flex items-center justify-between py-1 px-2">
-        <Link to="/" className="w-[40%]">
-          <img src={nav} alt="" className="h-[50px]" />
+        <Link to="/" className="w-[60%]">
+          <img src={nav} alt="" className=" pt-3" />
         </Link>
         <div className="bg-gray-600 p-2 rounded-md text-white cursor-pointer" onClick={toggleSidebar}>
           <FaBars />
