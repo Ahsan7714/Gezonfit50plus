@@ -17,7 +17,7 @@ function Blog1() {
   }, [dispatch, id]);
 
   return (
-    <div className="blog-detail-container font-outfit">
+    <div className="blog-detail-container font-outfit capitalize">
       {blogdetails ? (
         <div className="blog-detail py-10">
           <h1 className="text-[30px] p-4 font-semibold">{blogdetails.title}</h1>

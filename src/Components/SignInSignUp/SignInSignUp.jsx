@@ -72,7 +72,7 @@ const SignInSignUp = ({ onClose }) => {
   }
 
   return (
-    <div className="auth-popup">
+    <div className="auth-popup capitalize font-outfit">
       <button className="close-btn text-3xl" onClick={onClose}>
         &times;
       </button>

@@ -33,7 +33,7 @@ const Home = () => {
     }
   }, [location.state]);
   return (
-    <div>
+    <div className=' capitalize'>
       {
       screenSize > 786?
       <>

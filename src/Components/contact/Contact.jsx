@@ -1,7 +1,7 @@
 import React, { useState , useEffect} from 'react';
 import './Contact.css';
 import { useDispatch,useSelector } from 'react-redux';
-import { contactUs } from '../../store/reducers/userReducers';
+import { contactUs,clearState } from '../../store/reducers/userReducers';
 import toast, { LoaderIcon } from 'react-hot-toast'
 import Loader from '../Loader';
 
@@ -29,11 +29,12 @@ const Contact = () => {
         message: ''
       });
       toast.success('Bericht verzonden');
+      clearState();
     }
     if(error){
       toast.error(error);
     }
-  }, [isContactUsSubmitted]);
+  }, [isContactUsSubmitted,clearState]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

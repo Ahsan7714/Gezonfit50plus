@@ -30,7 +30,7 @@ const CommunityHome = () => {
                     <Cards />
                 </>
             ) : null}
-            <div>
+            <div className=' capitalize font-outfit'> 
                 <div className='bg-[#3c608a] text-white text-center p-4 text-[30px]'>
                     <h1>Sluit je aan bij ons netwerk om je ervaringen te delen, anderen te inspireren en onderwerpen te bespreken die je bezighouden in de chatroom.</h1>
                 </div>

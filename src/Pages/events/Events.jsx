@@ -161,7 +161,7 @@ function Events() {
       ) : (
         <></>
       )}
-      <div className="container font-outfit">
+      <div className="container font-outfit capitalize">
         <div className="header">
           <h1>Evenementen</h1>
           <div className="flex items-center gap-2">

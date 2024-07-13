@@ -77,7 +77,7 @@ function Services() {
       ) : (
         <></>
       )}
-    <div className="services-container">
+    <div className="services-container capitalize font-outfit">
       <div className="services-header">
         <h1>Onze Diensten</h1>
         <div className="search-container">

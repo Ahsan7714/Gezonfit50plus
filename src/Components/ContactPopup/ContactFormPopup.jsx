@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { contactUs } from "../../store/reducers/userReducers";
+import { contactUs,clearState } from "../../store/reducers/userReducers";
 import toast from "react-hot-toast";
 import Loader from "../Loader";
 
@@ -31,12 +31,13 @@ const ContactFormPopup = ({ onClose }) => {
         message: "",
       });
       toast.success("Bericht verzonden");
+      clearState();
       onClose();
     }
     if (error) {
       toast.error(error);
     }
-  }, [isContactUsSubmitted, error, onClose]);
+  }, [isContactUsSubmitted, error, onClose,clearState]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

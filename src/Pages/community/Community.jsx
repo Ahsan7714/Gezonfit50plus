@@ -67,7 +67,7 @@ function Community() {
           <Cards />
         </>
       ) : null}
-      <div className="">
+      <div className=" capitalize font-outfit">
         <div className="community-head flex flex-col justify-center items-center gap-2 py-5 text-[30px]">
           <h1 className="font-semibold">GezondFit50+ Community</h1>
           <p>Doe mee aan het gesprek met andere leden van de gemeenschap.</p>

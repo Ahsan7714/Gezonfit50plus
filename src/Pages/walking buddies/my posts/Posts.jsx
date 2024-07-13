@@ -173,7 +173,7 @@ const Posts = () => {
     return <Loader />;
   }
   return (
-    <div className="post-container font-outfit">
+    <div className="post-container font-outfit capitalize">
       <div className="post-header">
         <h1 className=" text-4xl font-medium">Mijn Posts</h1>
         <button

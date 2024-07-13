@@ -153,7 +153,7 @@ const MyProducts = () => {
   }
 
   return (
-    <div className="myProducts-container">
+    <div className="myProducts-container capitalize font-outfit">
       <div className="myProducts-header">
         <h1>Mijn Producten</h1>
         <button

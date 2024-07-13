@@ -122,7 +122,7 @@ function WalkingBuddies() {
       ) : (
         <></>
       )}
-      <div className="main-container">
+      <div className="main-container capitalize">
         <div className="header-1 flex flex-col lg:flex-row gap-3 items-center justify-between lg:py-4">
           <h1 className="lg:text-4xl font-semibold">
             Zoek activiteitenpartners
