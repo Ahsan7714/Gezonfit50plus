@@ -41,7 +41,7 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="productDetail-container capitalize font-outfit">
+    <div className="productDetail-container  font-outfit">
       <button onClick={() => navigate("/products")} className="back-button">
         Terug
       </button>

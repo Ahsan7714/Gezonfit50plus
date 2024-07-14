@@ -132,7 +132,7 @@ function MyServices() {
 
 
   return (
-    <div className="p-[20px] capitalize font-outfit">
+    <div className="p-[20px]  font-outfit">
       <div className="myServices-header ">
         <h1>Mijn Diensten</h1>
         <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">

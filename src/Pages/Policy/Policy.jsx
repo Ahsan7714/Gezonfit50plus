@@ -2,7 +2,7 @@ import React from 'react';
 
 const Policy = () => {
   return (
-    <div className="p-8 bg-gray-100 text-gray-800 font-outfit capitalize">
+    <div className="p-8 bg-gray-100 text-gray-800 font-outfit ">
       <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
         <h1 className="text-4xl font-bold text-center text-[#12adee] mb-8">Privacy Verklaring</h1>
         

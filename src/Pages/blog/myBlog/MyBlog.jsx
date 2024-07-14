@@ -76,7 +76,7 @@ if(loading){
 
 
   return (
-    <div className="myBlog-container capitalize font-outfit">
+    <div className="myBlog-container  font-outfit">
       <div className="myBolg-header">
         <h1>Mijn Blog</h1>
         <button

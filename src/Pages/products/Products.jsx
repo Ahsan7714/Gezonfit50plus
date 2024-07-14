@@ -87,7 +87,7 @@ function Products() {
       ) : (
         <></>
       )}
-      <div className="products-main-container capitalize font-outfit">
+      <div className="products-main-container  font-outfit">
         <div className="products-main-container-header">
           <h1>Onze Producten</h1>
           <div className="products-filters">
