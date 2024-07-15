@@ -46,7 +46,7 @@ const SignInSignUp = ({ onClose }) => {
       dispatch(clearState());
       onClose();
       dispatch(loadUser());
-      navigate("/");
+      // navigate("/");
     }
     if (error) {
       toast.error("Verkeerd e-mailadres of wachtwoord");
