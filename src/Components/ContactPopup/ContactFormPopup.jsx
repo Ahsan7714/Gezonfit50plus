@@ -58,7 +58,7 @@ const ContactFormPopup = ({ onClose }) => {
         >
           &times;
         </button>
-        <h2 className="text-2xl font-bold items-center flex justify-center mb-4">Contacteer Ons</h2>
+        <h2 className="text-2xl font-bold items-center flex justify-center mb-4">Contacteer ons</h2>
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Naam</label>

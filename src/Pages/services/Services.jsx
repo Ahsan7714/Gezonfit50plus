@@ -79,7 +79,7 @@ function Services() {
       )}
     <div className="services-container  font-outfit">
       <div className="services-header">
-        <h1>Onze Diensten</h1>
+        <h1>Onze diensten</h1>
         <div className="search-container">
           <input
             type="text"
@@ -93,12 +93,12 @@ function Services() {
           to="/my-services"
           className="bg-green-500 px-3 py-2 text-white rounded-md"
         >
-          Mijn Diensten
+          Mijn diensten
         </Link>):(
           <button onClick={() => toast.error("Meld u aan om deze functie te gebruiken")}
           className="bg-green-500 px-3 py-2 text-white rounded-md"
 >
-            Mijn Diensten
+            Mijn diensten
           </button>
         )}
         

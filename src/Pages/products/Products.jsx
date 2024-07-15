@@ -89,7 +89,7 @@ function Products() {
       )}
       <div className="products-main-container  font-outfit">
         <div className="products-main-container-header">
-          <h1>Onze Producten</h1>
+          <h1>Onze producten</h1>
           <div className="products-filters">
             <select value={selectedCategory} onChange={handleCategoryChange}>
               <option value="Alle">Alle</option>
@@ -106,9 +106,9 @@ function Products() {
             />
           </div>
           {user ? ( <Link to="/my-products" className="myproducts-btn">
-            Mijn Producten
+            Mijn producten
           </Link>):( <button onClick={()=>toast.error("Meld u aan om deze functie te gebruiken")} className="myproducts-btn">
-            Mijn Producten
+            Mijn producten
           </button>)}
          
         </div>

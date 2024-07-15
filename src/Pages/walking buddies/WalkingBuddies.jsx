@@ -133,7 +133,7 @@ function WalkingBuddies() {
               to="/posts"
               className="bg-[#37a8d8] shadow-[#ade6ff] shadow-lg text-white px-4 py-2 rounded hover:bg-[#247394]"
             >
-              Mijn Posts
+              Mijn zoekopdracht
             </Link>
           ) : (
             <button
@@ -142,7 +142,7 @@ function WalkingBuddies() {
               }
               className="bg-[#37a8d8] shadow-[#ade6ff] shadow-lg text-white px-4 py-2 rounded hover:bg-[#247394]"
             >
-              Mijn Posts
+             Mijn zoekopdracht
             </button>
           )}
         </div>

@@ -52,10 +52,10 @@ const MobileNavbar = () => {
                 <FaHome className="mr-2" />  Startpagina
               </Link>
               <Link to="/blogs" onClick={toggleSidebar} className="flex items-center py-2 px-4 text-[20px] hover:bg-gray-200">
-                <FaBlog className="mr-2" /> Artikelen en Blogs
+                <FaBlog className="mr-2" /> Artikelen en blogs
               </Link>
               <Link to="/walking-buddies" onClick={toggleSidebar} className="flex items-center py-2 px-4 text-[20px] hover:bg-gray-200">
-                <FaWalking className="mr-2" /> Activiteit Partners
+                <FaWalking className="mr-2" /> Activiteit partners
               </Link>
               <Link to="/community" onClick={toggleSidebar} className="flex items-center py-2 px-4 text-[20px] hover:bg-gray-200">
                 <FaUsers className="mr-2" /> gemeenschap

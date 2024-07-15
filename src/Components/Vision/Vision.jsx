@@ -7,7 +7,7 @@ const Vision = () => {
     {
       image:
         "https://media.istockphoto.com/id/175139199/photo/family-walking-together-in-park.jpg?s=612x612&w=0&k=20&c=v-EYSNaxgY1slpomD_BaR3o6Z1BtDqnaOPwaH9JDp3o=",
-      title: "Ochtendwandeling in het Park", // Dutch for "Morning Walk in the Park"
+      title: "Ochtendwandeling in het park", // Dutch for "Morning Walk in the Park"
       date: "15 juni 2024", // Dutch date format
       description:
         "Doe mee aan een verfrissende ochtendwandeling en ontmoet nieuwe vrienden.", // Dutch for description
@@ -16,7 +16,7 @@ const Vision = () => {
     {
       image:
         "https://media.istockphoto.com/id/1211100005/photo/happy-big-family-having-lunch-at-summer-garden-party.jpg?s=612x612&w=0&k=20&c=n0MI89dTZx1qlWWYVsZGoHAf65rMk8ECgiRkp7SCt7U=",
-      title: "Workshop Gezonde Kookkunst", // Dutch for "Healthy Cooking Workshop"
+      title: "Workshop gezonde kookkunst", // Dutch for "Healthy Cooking Workshop"
       date: "20 juni 2024", // Dutch date format
       description:
         "Leer hoe je gemakkelijk en heerlijke gezonde maaltijden kunt koken.", // Dutch for description
@@ -34,7 +34,7 @@ const Vision = () => {
   return (
     <div className=" py-5 flex flex-col font-outfit">
       <div className="flex flex-col justify-center items-center gap-9 font-outfit">
-        <p className="text-[40px]">Onze Visie</p>
+        <p className="text-[40px]">Onze visie</p>
         <p className="text-[23px] font-medium px-6 lg:px-10 text-center text-[#6a6c6f]">
         Gezondfit50plus bevordert fysiek, mentaal en sociaal welzijn, zodat iedereen na hun 50ste kan genieten van een gezond en actief leven
         </p>
@@ -70,7 +70,7 @@ const Vision = () => {
       {/* buy products */}
       <div className=" flex flex-col justify-center items-center">
         <section class="health-products-a">
-          <h1>Bezoek Onze Webwinkel voor Activiteiten en Welzijn</h1>
+          <h1>Bezoek onze webwinkel voor activiteiten en welzijn</h1>
           <p>
           Ontdek producten die uw actieve levensstijl ondersteunen, van wandelschoenen tot fitnessapparatuur. Bied ook uw eigen activiteiten- en welzijnsproducten aan en draag bij aan de gezondheid en het welzijn van anderen. Onze webwinkel biedt een platform waar leden hun producten kunnen aanbieden om een gezondere levensstijl te bevorderen.
           </p>
@@ -92,7 +92,7 @@ const Vision = () => {
                 src="https://images.pexels.com/photos/4498483/pexels-photo-4498483.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Product 2"
               />
-              <h2>Activiteit Trackers</h2>
+              <h2>Activiteit trackers</h2>
               <p>
                 Fitness horloges of stappentellers om stappen, afstand en andere
                 metingen bij te houden.
@@ -103,7 +103,7 @@ const Vision = () => {
                 src="https://images.pexels.com/photos/4498610/pexels-photo-4498610.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Product 3"
               />
-              <h2>Hydratatie Uitrusting</h2>
+              <h2>Hydratatie uitrusting</h2>
               <p>
                 Waterflessen of hydratatierugzakken om gehydrateerd te blijven
                 tijdens het sporten.
@@ -118,15 +118,15 @@ const Vision = () => {
               <p>Boeken en gidsen over wandelen</p>
             </div>
           </div>
-          <a class="cta-button hover:no-underline" href="/products">
+          <Link class="cta-button hover:no-underline" to="/products">
             Nu Winkelen
-          </a>
+          </Link>
         </section>
       </div>
         {/* services */}
         <div className="services-section">
         <div className=" flex flex-col justify-center items-center  w-[90%] mx-auto health-products-a">
-          <h1>Onze Diensten</h1>
+          <h1>Onze diensten</h1>
           <p>
             Maak gebruik van deze mogelijkheid om iets voor een ander te
             betekenen. Help bij tuinieren, klusjes in en om het huis, of zelfs
@@ -139,7 +139,7 @@ const Vision = () => {
       {/* events */}
       <div className="events-section">
         <div className="hero-section">
-          <h1>Aankomende Evenementen voor Actieve Volwassenen van 50+</h1>
+          <h1>Aankomende evenementen voor actieve volwassenen van 50+</h1>
           <p>
             Neem deel aan onze gemeenschapsevenementen en blijf actief, gezond
             en verbonden.

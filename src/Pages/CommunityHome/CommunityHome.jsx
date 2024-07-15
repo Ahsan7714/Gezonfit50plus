@@ -52,7 +52,7 @@ const CommunityHome = () => {
                         <Link to="/community-chat" className="bg-[#3c608a] text-white py-2 px-6 rounded-full text-lg hover:bg-[#2b4a6d] transition duration-300">Deelnemen</Link>
 
                         ):(
-                        <button onClick={()=>toast.error("Meld u aan om deel te nemen aan de chat")} className="bg-[#3c608a] text-white py-2 px-6 rounded-full text-lg hover:bg-[#2b4a6d] transition duration-300">Join Chat</button>
+                        <button onClick={()=>toast.error("Meld u aan om deel te nemen aan de chat")} className="bg-[#3c608a] text-white py-2 px-6 rounded-full text-lg hover:bg-[#2b4a6d] transition duration-300">Deelnemen</button>
                         )}
                     </div>
                 </div>

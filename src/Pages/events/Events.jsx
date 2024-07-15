@@ -182,11 +182,11 @@ function Events() {
                 data-bs-target="#staticBackdrop"
                 className="bg-gradient-to-r from-[#0f8ceb] to-[#1ad0f1] px-3 py-2 text-white rounded-md"
               >
-                Post Event
+                Evenement publiceren
               </button>
               )  : (
                <button  onClick={()=>toast.error("Meld u aan om deze functie te gebruiken")}  className="bg-gradient-to-r from-[#0f8ceb] to-[#1ad0f1] px-3 py-2 text-white rounded-md"
->Post Event</button>
+>Evenement publiceren</button>
               )}
               
             </div>
