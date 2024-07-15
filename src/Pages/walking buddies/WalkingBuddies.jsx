@@ -192,7 +192,7 @@ function WalkingBuddies() {
         <div className="walk-posts grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
           {filteredPosts.length === 0 ? (
             <div className="col-span-full text-center text-xl text-gray-500">
-              No person found
+              Geen persoon gevonden
             </div>
           ) : (
             filteredPosts.map((post, index) => (
