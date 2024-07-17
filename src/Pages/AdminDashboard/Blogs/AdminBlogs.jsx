@@ -210,7 +210,6 @@ const AdminBlogs = () => {
                         { indent: "+1" },
                       ],
                       ["clean"],
-                      ["link", "image", "video"],
                     ],
                   }}
                 />
