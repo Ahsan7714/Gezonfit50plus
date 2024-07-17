@@ -160,8 +160,8 @@ const AdminBlogs = () => {
   };
 
   const handleEditorChange = (content) => {
-    if (content.length > 10000) {
-      toast.error("Content cannot exceed 10000 characters");
+    if (content.length > 20000) {
+      toast.error("Content cannot exceed 20000 characters");
     } else {
       setFormData({ ...formData, content });
     }
@@ -210,6 +210,7 @@ const AdminBlogs = () => {
                         { indent: "+1" },
                       ],
                       ["clean"],
+                      ["link", "image", "video"],
                     ],
                   }}
                 />

@@ -44,10 +44,10 @@ const LandingCarasoul = () => {
         ssr={true} // means to render carousel on server-side.
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={3000}
-        keyBoardControl={true}
-        customTransition="transform 500ms ease-in-out"
-        transitionDuration={500}
+        autoPlaySpeed={5500} // Screen stays for 5 seconds
+    keyBoardControl={true}
+    customTransition="transform 1500ms ease-in-out" // Slow down the transition
+    transitionDuration={1500} 
         containerClass="carousel-container"
         arrows={!isMobile} // Conditionally render arrows
         dotListClass="custom-dot-list-style"
